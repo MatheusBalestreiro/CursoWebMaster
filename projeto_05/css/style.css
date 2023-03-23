@@ -49,7 +49,7 @@ nav.mobile ul{
 	display: none;
 	width: 100%;
 	left: 0;
-	top: 95px;
+	top: 110px;
 	border-bottom:4px solid #EB2D2D;
 	z-index: 999;
 	position: absolute;
@@ -260,6 +260,8 @@ section.veiculos-destaque .container{
 
 .half1-wraper li{
 	margin-left: 15px;
+	font-size: 18px;
+
 }
 
 .half1-wraper a{
@@ -437,7 +439,7 @@ section.venda{
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 30%;
+	width: 0;
 	height: 20px;
 	border-radius: 20px;
 	background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200));
@@ -447,7 +449,8 @@ section.venda{
 	width: 26px;
 	height: 26px;
 	position: absolute;
-	left: calc(30% - 13px);
+	/*Vamos deixar em -13 para ficar centralizado!*/
+	left: -13px;
 	top: -3px;
 	cursor: pointer;
 	border-radius: 8px;
@@ -633,13 +636,17 @@ section.venda-single .container{
 }
 
 .nav-galeria-wraper{
-	width: 200%;
+	/*
+		via js=>width
+	*/
 }
 
 .mini-img-wraper{
 	float: left;
 	padding:9px;
-	width:calc(33.3% * (100 / 200));
+	/*
+		via js=>width
+	*/
 }
 
 .mini-img{
@@ -720,8 +727,6 @@ section.sobre .descricao-autor{
 }
 
 @media screen and (max-width: 900px){
-
-
 	.nome-depoimento{
 	float: left;
 	width: 100%;
@@ -764,9 +769,9 @@ section.sobre .descricao-autor{
 	}
 
 	section.banner{
-		background-size: cover;
-		background-position: 100px center;
-		height: 80vh;
+		background-size: contain;
+		background-position: left bottom;
+		height: 550px;
 	}
 
 	nav.desktop
@@ -818,8 +823,15 @@ section.sobre .descricao-autor{
 
 
 @media screen and (max-width: 580px){
+
+header div.logo img{
+	width: 170px;
+	position: relative;
+	top: 10px;
+}
+
 .text-banner{
-	padding:30px;
+	padding:80px;
 }
 
 .text-banner-single{
@@ -868,5 +880,15 @@ section.veiculos-destaque .container{
 @media screen and (max-width: 480px){
 	.vitrine-destaque{
 		width: 100%;
+	}
+
+	.text-banner{
+		padding:40px;
+	}
+}
+
+@media screen and (max-width: 380px){
+	section.banner{
+		background-image: none;
 	}
 }

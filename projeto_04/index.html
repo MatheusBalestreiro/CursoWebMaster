@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Projeto 04</title>
+	<link href="css/slick.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8" />
@@ -18,20 +19,20 @@
 
 		<nav class="menu-desktop">
 			<ul>
-				<li><a href="">quem sou</a></li>
-				<li><a href="">depoimentos</a></li>
-				<li><a href="">sobre</a></li>
-				<li><a href="">contato</a></li>
+				<li><a href="#sobre">quem sou</a></li>
+				<li><a href="#depoimentos">depoimentos</a></li>
+				<li><a href="#videos">vídeos</a></li>
+				<li><a href="#contato">contato</a></li>
 			</ul>
 		</nav>
 
 
 		<nav class="menu-mobile">
 			<ul>
-				<li><a href="">quem sou</a></li>
-				<li><a href="">depoimentos</a></li>
-				<li><a href="">sobre</a></li>
-				<li><a href="">contato</a></li>
+				<li><a href="#sobre">quem sou</a></li>
+				<li><a href="#depoimentos">depoimentos</a></li>
+				<li><a href="#videos">vídeos</a></li>
+				<li><a href="#contato">contato</a></li>
 			</ul>
 		</nav>
 
@@ -102,7 +103,7 @@
 	</section><!--servicos-->
 
 
-	<section class="perfil-container">
+	<section id="sobre" class="perfil-container">
 		<div class="container">
 			<div class="perfil-wraper">
 				<div class="perfil-wraper2">
@@ -120,7 +121,7 @@
 		</div><!--container-->
 	</section><!--perfil-container-->
 
-	<section class="videos">
+	<section id="videos" class="videos">
 		<div class="container">
 			<div class="box-video">
 				<iframe src="https://www.youtube.com/embed/UhuoLV2u3u8" frameborder="0" allowfullscreen></iframe>
@@ -131,7 +132,7 @@
 			</div><!--box-video-->
 
 			<div class="box-video">
-				<iframe src="https://www.youtube.com/embed/UhuoLV2u3u8" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/UhuoLV2u3u8" frameborder="0" allowfullscreen></iframe>
 			</div><!--box-video-->
 			<div class="clear"></div>
 		</div><!--container-->
@@ -197,13 +198,32 @@
 			</div><!--tratamento-single-->
 
 		</div><!--tratamento-container-->
-		<div class="clear"></div>
+		<!--<div class="clear"></div>-->
 	</div><!--container-->
 	</section><!--tratamentos-->
 
-	<section class="depoimentos">
+	<section id="depoimentos" class="depoimentos">
 		<h2>Depoimentos</h2>
 		<div class="container">
+			<div class="depoimento-single">
+				<quote>
+					“Estrutura e atendimento excepcionais! adorei o atendimento da Dra. Fernanda, excelente profissional.”
+				</quote>
+				<div class="nome-depoimento">
+					<img src="imagens/depoimento1.png" />
+					<span>Maria Augusta Santos</span>
+				</div><!--nome-depoimento-->
+			</div><!--depoimento-single-->
+			<div class="depoimento-single">
+				<quote>
+					“Estrutura e atendimento excepcionais! adorei o atendimento da Dra. Fernanda, excelente profissional.”
+				</quote>
+				<div class="nome-depoimento">
+					<img src="imagens/depoimento1.png" />
+					<span>Maria Augusta Santos</span>
+				</div><!--nome-depoimento-->
+			</div><!--depoimento-single-->
+
 			<div class="depoimento-single">
 				<quote>
 					“Estrutura e atendimento excepcionais! adorei o atendimento da Dra. Fernanda, excelente profissional.”
@@ -242,7 +262,7 @@
 		<div class="clear"></div>
 	</section><!--social-->
 
-	<section class="contato">
+	<section id="contato" class="contato">
 		<h2>Contato</h2>
 		<form>
 			<div class="form-wraper w100">
@@ -289,6 +309,10 @@
 	</div><!--container-->
 	</footer>
 
-
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/slides.js"></script>
+	<script src="js/menu_responsivo.js"></script>
+	<script src="js/menuScroll.js"></script>
 </body>
 </html>

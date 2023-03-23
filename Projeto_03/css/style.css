@@ -45,7 +45,6 @@ nav.mobile-menu{
 
 nav.mobile-menu ul{
 	background-color: white;
-	opacity: 0;
 	transform: 1s;
 	display: none;
 	position: absolute;
@@ -54,10 +53,6 @@ nav.mobile-menu ul{
 	top: 80px;
 	list-style-type: none;
 	text-align: center;
-}
-
-nav.mobile-menu:hover ul{
-	opacity: 1;
 }
 
 nav.mobile-menu ul li a{
