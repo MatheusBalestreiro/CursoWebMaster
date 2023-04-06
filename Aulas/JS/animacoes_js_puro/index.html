@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript Puro</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		header{
+			background-color:#4f5d80;
+			padding:10px;
+			display: flex;
+			height: 45px;
+		}
+		.logo{
+			color:white;
+			font-size: 20px;
+			width:50%;
+		}
+
+		.logo a{text-decoration: none;color:white;}
+
+		.menu{
+			position: absolute;
+			left: 0;
+			top: 45px;
+			width:100%;
+			overflow:hidden;
+			background-color:#262e42;
+			text-align: center;
+		}
+
+		.hide{transition:1s;height:0;}
+
+		.show{
+			transition:1s;
+			height: 150px;
+		}
+
+		.menu a{
+			display: inline-block;
+			padding:10px 0;
+			text-decoration: none;
+			color: white;
+			font-size: 23px;
+		}
+
+		.menu a:hover{
+			text-decoration: underline;
+		}
+
+		.icon-menu{
+			width:50%;
+			text-align: right;
+
+		}
+
+		.icon-menu svg{
+			font-size: 24px;
+			color: white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="logo"><a href="#">Danki Code</a></div>
+	<div class="icon-menu"><i class="fas fa-bars"></i></div>
+	<div id="menu" class="menu hide">
+		<a href="#">Home</a>
+		<br/>
+		<a href="#">Sobre</a>
+		<br/>
+		<a href="#">Contato</a>
+	<!--menu-->
+</header>
+
+
+<script src="js/all.min.js"></script>
+<script>
+	var iconMenu = document.querySelectorAll('.icon-menu');
+
+	iconMenu[0].addEventListener('click',()=>{
+			//Efeito de opacidade.
+			/*
+			let menu = document.getElementById('menu');
+			if(menu.classList.contains('hide')){
+				menu.classList.add('show');
+				menu.classList.remove('hide');
+			}else{
+				menu.classList.add('hide');
+				menu.classList.remove('show');
+			}
+			*/
+
+			//Efeito toggle
+			let menu = document.getElementById('menu');
+			if(menu.classList.contains('hide')){
+				menu.classList.add('show');
+				menu.classList.remove('hide');
+			}else{
+				menu.classList.add('hide');
+				menu.classList.remove('show');
+			}
+
+
+	});
+
+</script>
+</body>
+</html>
