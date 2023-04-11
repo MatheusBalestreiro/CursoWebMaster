@@ -7,15 +7,26 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 id="text"></h1>
+  <h1> Olá da Danki</h1>
 
   <script>
-    window.onload = function(){
+    class Pessoa{
+      constructor(nome,idade){
+        this.nome = nome;
+        this.idade = idade;
+      }
+      getNome(){
+        return this.nome;
+      }
 
-      var el = document.getElementById('text');
-      el.innerHTML = "Olá mundo"
-      el.style.color="green";
+      getIdade(){
+        return this.idade;
+      }
     }
+
+    var pessoa = new Pessoa('Matheus', '25');
+    console.log(pessoa.getNome());
+    console.log(pessoa.getIdade());
 
   </script>
 
