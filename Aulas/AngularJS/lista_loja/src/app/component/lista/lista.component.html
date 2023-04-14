@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()">
+	<input type="text" name="titleNovo" [(ngModel)]="titleNovo">
+	<input type="submit" value="Submit">
+</form>
+
+<app-lista-item *ngFor="let lista of listas" [lista]="lista" (deleteLista)="deleteLista($event)"></app-lista-item>
