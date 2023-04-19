@@ -9,12 +9,11 @@
                 cursor: pointer;
             }
 
-            .player-options,.enemy-options{
-                width:50%;
-            }
-
             .align{
                 display: flex;
+                width: 100%;
+                height: 100vh;
+                justify-content: space-around;
             }
         </style>
         <h1 style="text-align: center;">Pedra, papel ou tesoura!</h1>
@@ -31,7 +30,7 @@
                 <div><img opt="papel" src="paper.png" /></div>
                 <div><img opt="tesoura" src="scisor.png" /></div>
             </div>
-    </div>
+        </div>
         <script>
             var elementos = document.querySelectorAll('.player-options div > img');
             var playerOpt = "";
