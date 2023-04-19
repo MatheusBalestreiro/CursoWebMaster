@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Perguntas & Respostas</title>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Qual o melhor site de programação</h1>
+        </div>
+
+        <form class="pergunta">
+        <div class="resposta">
+            <span>Opção 1</span>
+            <input type="radio" name="pergunta1" value="correta" />
+            <br/>
+            </div>
+        <div class="resposta">
+            <span>Opção 2</span>
+            <input type="radio" name="pergunta1" value="incorreta" />
+            <br/>
+        </div>
+        <div class="resposta">
+            <span>Opção 3</span>
+            <input type="radio" name="pergunta1" value="incorreta" />
+            <br/>
+        </div>
+        </form>
+
+
+        <div class="title">
+            <h1>Qual o melhor site de programação</h1>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <span>Opção 1</span>
+                <input type="radio" name="pergunta1" value="correta" />
+                <br/>
+                </div>
+            <div class="resposta">
+                <span>Opção 2</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+            </div>
+            <div class="resposta">
+                <span>Opção 3</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1>Qual linguagem de programação o Matheus mais gosta?</h1>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <span>PHP</span>
+                <input type="radio" name="pergunta1" value="correta" />
+                <br/>
+                </div>
+            <div class="resposta">
+                <span>Python</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+            </div>
+            <div class="resposta">
+                <span>Java</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+            </div>
+        </form>
+        <script>
+            //1) Colocar o span e input type radio dentro de uma div para preencher toda a linha;
+            //2) Recuperar o elemento pai da opção correta ou incorreta e aplicar a devida cor;
+            //3) Depois de selecionado a resposta deixar o botão desabilitado
+
+
+
+            var elementos = document.querySelectorAll('[type=radio]');
+
+            for(var i = 0; i < elementos.length; i++){
+                elementos[i].addEventListener('change',function(e){
+                    let marcado = e.target.value;
+                    if(marcado == "correta"){
+                        
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'rgba(0,128,0,0.3)';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for(var n = 0; n < els.length; n++){
+                        els[n].disabled = true;
+                    }
+                        
+                    }else if(marcado == "incorreta"){
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'rgba(255, 0, 0,0.3)';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for(var n = 0; n < els.length; n++){
+                        els[n].disabled = true;
+                    }
+
+                    let correta = parentNode.parentNode.querySelector('[value=correta]');
+                    correta.parentNode.style.backgroundColor = 'rgba(0,128,0,0.3)';
+
+
+                    }
+                })
+            }
+        </script>
+
+    </body>
+</html>
