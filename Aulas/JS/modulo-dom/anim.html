@@ -1,0 +1,131 @@
+<html>
+    <body>
+        <style>
+            /*
+            .box{
+                width:200px;
+                height: 200px;
+                background-color:red;
+                margin-left: 0;
+            }
+            .animEsquerda{
+                transition:1s;
+                margin-left: 90px;
+                margin-top:20px;
+                background-color: green;
+            }
+            */
+            .conteudo h2 span{
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+            .conteudo p{
+                overflow:hidden;
+                height:10px;
+                transition:1s;
+            }
+
+            .mostrar{
+
+                height:200px !important;
+            }
+        </style>
+        <!--<div class="box"></div>-->
+        <div class="conteudo">
+            <h2>Titulo do conteúdo <span>Ver mais!</span></h2>
+            <p>Lorem ipsum dolor sit amet, c
+                onsectetur adipiscing elit. In interdum n
+                eque ac laoreet iaculis. Cras et dictum au
+                gue, eget finibus mauris. Nullam justo metus
+                , tincidunt ac varius ut, hendrerit id dolor.
+                 Fusce sodales tempus commodo. Morbi ac elit vel 
+                 ipsum maximus euismod sit amet in arcu. Curabitur 
+                 imperdiet ante a libero volutpat, vitae dignissim 
+                 lacus semper. Morbi scelerisque velit non accumsan
+                  convallis. Proin nec tempus ante. Quisque justo justo, 
+                  ittis id mauris id, tincidunt lobortis erat. Aenean
+                   quis consequat metus, nec fringilla tortor. 
+                   Donec sit amet bibendum tellus. Vivamus imperdiet nulla ac feugiat rutrum.</p>
+        </div>
+        <div class="conteudo">
+            <h2>Titulo do conteúdo <span>Ver mais!</span></h2>
+            <p>Lorem ipsum dolor sit amet, c
+                onsectetur adipiscing elit. In interdum n
+                eque ac laoreet iaculis. Cras et dictum au
+                gue, eget finibus mauris. Nullam justo metus
+                , tincidunt ac varius ut, hendrerit id dolor.
+                 Fusce sodales tempus commodo. Morbi ac elit vel 
+                 ipsum maximus euismod sit amet in arcu. Curabitur 
+                 imperdiet ante a libero volutpat, vitae dignissim 
+                 lacus semper. Morbi scelerisque velit non accumsan
+                  convallis. Proin nec tempus ante. Quisque justo justo, 
+                  ittis id mauris id, tincidunt lobortis erat. Aenean
+                   quis consequat metus, nec fringilla tortor. 
+                   Donec sit amet bibendum tellus. Vivamus imperdiet nulla ac feugiat rutrum.</p>
+        </div>
+        <div class="conteudo">
+            <h2>Titulo do conteúdo <span>Ver mais!</span></h2>
+            <p>Lorem ipsum dolor sit amet, c
+                onsectetur adipiscing elit. In interdum n
+                eque ac laoreet iaculis. Cras et dictum au
+                gue, eget finibus mauris. Nullam justo metus
+                , tincidunt ac varius ut, hendrerit id dolor.
+                 Fusce sodales tempus commodo. Morbi ac elit vel 
+                 ipsum maximus euismod sit amet in arcu. Curabitur 
+                 imperdiet ante a libero volutpat, vitae dignissim 
+                 lacus semper. Morbi scelerisque velit non accumsan
+                  convallis. Proin nec tempus ante. Quisque justo justo, 
+                  ittis id mauris id, tincidunt lobortis erat. Aenean
+                   quis consequat metus, nec fringilla tortor. 
+                   Donec sit amet bibendum tellus. Vivamus imperdiet nulla ac feugiat rutrum.</p>
+        </div>
+        <div class="conteudo">
+            <h2>Titulo do conteúdo <span>Ver mais!</span></h2>
+            <p>Lorem ipsum dolor sit amet, c
+                onsectetur adipiscing elit. In interdum n
+                eque ac laoreet iaculis. Cras et dictum au
+                gue, eget finibus mauris. Nullam justo metus
+                , tincidunt ac varius ut, hendrerit id dolor.
+                 Fusce sodales tempus commodo. Morbi ac elit vel 
+                 ipsum maximus euismod sit amet in arcu. Curabitur 
+                 imperdiet ante a libero volutpat, vitae dignissim 
+                 lacus semper. Morbi scelerisque velit non accumsan
+                  convallis. Proin nec tempus ante. Quisque justo justo, 
+                  ittis id mauris id, tincidunt lobortis erat. Aenean
+                   quis consequat metus, nec fringilla tortor. 
+                   Donec sit amet bibendum tellus. Vivamus imperdiet nulla ac feugiat rutrum.</p>
+        </div>
+        <script>
+            /*
+           var box = document.querySelectorAll('.box')[0];
+           
+           setTimeout(()=>{
+                box.classList.add('animEsquerda');
+           },1000);
+           
+           box.addEventListener('click',()=>{
+            box.classList.add('animEsquerda');
+           })
+
+           */
+
+           var span = document.querySelector('.conteudo span');
+            
+            span.addEventListener('click',function(){
+                var conteudo = document.querySelector('.conteudo p');
+
+                if(conteudo.classList.contains('mostrar')){
+                    span.innerHTML = 'Ver mais!';
+                    conteudo.classList.remove('mostrar');
+                }else{
+                    span.innerHTML = 'Ocultar';
+                    conteudo.classList.add('mostrar');
+
+                }
+                
+            });
+
+        </script>
+    </body>
+</html>
