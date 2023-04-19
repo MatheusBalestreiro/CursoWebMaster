@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            header{
+                background-color: #5a71bb;
+                text-align: center;
+                color:white;
+                padding:20px 0;
+            }
+
+            .lista-cadastro{
+                display: flex;
+                margin:20px 0;
+                padding:0 20px;
+            }
+            .lista-cadastro input[type=text]{
+                flex:1;
+                height:40px;
+                padding-left: 20px;
+            }
+            .lista-produto-single{
+                padding:10px 0;
+                margin:20px 0;
+                border-bottom:1px solid #ccc;
+                display: flex;
+            }
+            .lista-produto-single h3{
+                flex:1;
+                padding:0 20px;
+            }
+            h3.price-produto{
+                text-align: right;
+                font-size: 17px;
+            }
+            h3.price-produto > span{
+                background-color: #5a71bb;
+                padding:8px 10px;
+                border-radius:20px;
+                color:white;
+            }
+            .soma-produto{
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>App Lista de SuperMercado</h2>
+        </header>
+        <div class="lista-cadastro">
+            <input type="text" placeholder="nome do produto..."
+            name="nome_produto" />
+            <input type="number" name="price" step="0.01"
+            title="This should be a number with up to 2 decimal places.">
+
+
+            <input type="submit" name="acao" value="Cadastrar" />
+        </div>
+
+        <div class="lista-produtos">
+            
+
+        </div>
+
+        <div class="soma-produto">
+            <h1>Total: R$0</h1>
+        </div>
+
+        <button name="limpar">Limpar</button>
+
+        <script src="supermercado.js"></script>
+    </body>
+</html>
