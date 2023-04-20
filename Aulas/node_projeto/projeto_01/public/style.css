@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(220,220,220)
+}
+
+.tarefas{
+  margin: 10px auto;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+input{
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+input[type=text]{
+  padding: 8px 10px;
+}
+
+input[type=submit]{
+  padding: 8px 10px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(126, 205, 9);
+}
+input[type=submit]:hover{
+  background-color: rgb(143, 223, 22);
+}
+
+.tarefas a{
+  text-decoration: none;
+  color: black;
+}
