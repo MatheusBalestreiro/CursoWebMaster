@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Portal do Cliente</title>
+</head>
+<body>
+
+    <div style="display:none" class="cliente">  
+      <img src="logo.png">
+      <h2>Deseja dar aulas na Plataforma ?</h2> 
+      <form id="form-cliente">
+        <textarea name="comprovante" placeholder="Qual curso você gostaria de ministrar?"></textarea>
+        <input type="file" name="arquivo">
+        <input type="submit" name="acao" value="Enviar!">
+      </form>  
+    </div>
+
+    <div style="display:none" class="admin">
+      <a id="login" class="logButton" href="">Logar com o Google</a>
+      <div style="display:none" class="listar-pedidos">
+        <h1>Últimas solicitações</h1>
+        <div class="container-pedidos">
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+    <script src="app.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get('admin');
+      if(myParam != null){
+        //Entrar na area administrativa
+        const adminArea = document.querySelector('.admin');
+        adminArea.style.display = "block";
+        auth.onAuthStateChanged((val)=>{
+          if(val){
+            if(val.email == "matheusafonso95@gmail.com"){
+              loginBtn.style.display = "none";
+              alert('Loguei como admin!');
+              document.querySelector(".listar-pedidos").style.display="block";
+            }else {
+              alert('Este e-mail não é autorizado')
+            }
+          }
+        })
+      }else {
+        //Sou usuário
+        const clienteArea = document.querySelector('.cliente');
+        clienteArea.style.display = "block";
+      }
+    </script>
+</body>
+</html>
