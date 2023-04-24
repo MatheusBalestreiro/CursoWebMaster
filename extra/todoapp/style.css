@@ -1,0 +1,172 @@
+.content{
+  display: none;
+}
+
+.login {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilo para o conteúdo da tela */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para o título da tela */
+.content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Estilo para o link de logout */
+.content .logout {
+  color: #f00;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Estilo para o formulário de cadastro de tarefa */
+.form-cadastro-tarefa {
+  margin-top: 50px;
+}
+
+/* Estilo para a caixa de texto da tarefa */
+.tarefa {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* Estilo para o campo de data e hora da tarefa */
+.date {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* Estilo para o botão de cadastro de tarefa */
+#submitBtn {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content a {
+  color: #f00;
+  background-color: white;
+  border: 1px solid #f00;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: normal;
+}
+
+.content a:hover{
+  background-color: #f00;
+  color:#fff;
+  border: none;
+}
+
+/* Estilo para o botão de cadastro de tarefa quando o mouse está sobre ele */
+#submitBtn:hover  {
+  background-color: #fff;
+  color: #f00;
+  border: 1px solid #f00;
+}
+
+/* Estilo para a lista de tarefas do usuário */
+.tarefas-usuario {
+  margin-top: 50px;
+  text-align: left;
+}
+
+/* Estilo para o título da lista de tarefas do usuário */
+.tarefas-usuario h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Estilo para a lista de tarefas do usuário */
+#tarefas-single {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para cada item da lista de tarefas do usuário */
+#tarefas-single li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

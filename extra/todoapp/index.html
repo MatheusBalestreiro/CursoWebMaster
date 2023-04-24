@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TODO list</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <h2>Login</h2>
+        <form class="login-form">
+          <label>Email:</label>
+          <input type="email" id="email" name="email" required><br>
+
+          <label>Senha:</label>
+          <input type="password" id="password" name="password" required><br>
+
+          <button type="submit" id="submitBtn">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Ola <span id="user-email"></span>! </h2>
+      <a class="logout" href="#">Deslogar</a>
+      <form class="form-cadastro-tarefa">
+        <textarea class="tarefa" name="tarefa" id="" cols="30" rows="10" required></textarea>
+        <input class="date" type="datetime-local" name="datetime" required>
+        <button type="submit" id="submitBtn">Cadastrar tarefa</button>
+      </form>
+      <div class="tarefas-usuario">
+        <h3>Listagem de tarefas atuais:</h3>
+        <ul id="tarefas-single"></ul>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
