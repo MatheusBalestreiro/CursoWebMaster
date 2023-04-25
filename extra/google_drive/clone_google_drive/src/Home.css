@@ -1,0 +1,199 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+}
+
+.header__logo{
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img{
+  width: 50px;
+}
+
+.header__logo span{
+  font-family: "Product Sans",Arial,sans-serif;
+  font-size: 22px;
+  padding-left: 8px;
+  color: #5f6368;
+}
+
+.header__user img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header__pesquisa{
+  width: 45%;
+}
+
+.header__pesquisa input[type=text]{
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  border: 0;
+  border-radius: 26px;
+  background-color: rgb(240,240,240);
+  font-weight: bold;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+}
+
+.main__sidebar{
+  width: 250px;
+  padding: 40px 10px;
+  height: 90vh;
+}
+
+.main__content{
+  width: calc(100% - 250px);
+  padding: 10px;
+}
+
+.hidden-input{
+  display: none;
+}
+
+.main__btnFileSelect{
+  padding: 16px 18px;
+  border-radius: 15px;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);
+  cursor: pointer;
+}
+
+.main__folderMeuDrive{
+  margin-top: 35px;
+  display: flex;
+  background-color: rgba(3,169,252,0.2);
+  border-radius: 20px;
+  align-items: center;
+  padding: 4px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.main__folderMeuDrive svg{
+  font-size: 24px;
+}
+
+.main__folderMeuDrive span{
+  padding-left: 15px;
+  font-size: 14px;
+  color: #1f1f1f
+}
+
+.main__topoText h2{
+  padding: 8px 0;
+  font-weight: 400;
+  border-bottom:1px solid #ccc;
+  color: #1f1f1f;
+}
+
+.progressBar{
+  height: 75vh;
+  display: flex;
+  align-items: end;
+  padding: 4px;
+  padding-left: 20px;
+}
+
+.box__files{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.box__fileSingle{
+  width: 31%;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.iconDownload{
+  padding: 30px;
+}
+
+.box__fileSingle svg{
+  font-size: 50px;
+}
+
+.box__fileSingle a{
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  display: block;
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 500;
+  background-color: rgb(245,245,245);
+}
+
+.login__page{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245,245,245);
+}
+
+.card {
+  width: 20%;
+  height: 254px;
+  background: rgb(240,240,240);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+ }
+ 
+ .shadow {
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+              0 0  0 2px rgb(190, 190, 190),
+              0.3em 0.3em 1em rgba(0,0,0,0.3);
+ }
+
+ .text__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding: 10px;
+ }
+
+ .text__login span {
+  color: #1E90FF;
+ }
+
+ .card .shadow a img{
+  width: 20px;
+ }
+
+@media screen and (max-width: 768px){
+
+    .main{
+      flex-wrap: wrap;
+    }
+
+    .main__content{
+      width: 100%;
+    }
+
+    .main__sidebar{
+      width: 100%;
+      padding: 40px 10px;
+    }
+ }
